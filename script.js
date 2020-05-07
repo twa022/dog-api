@@ -191,17 +191,18 @@ function toggleSlideshow() {
 function modeSelectHandler() {
 	$('#form-mode').on('change', 'input', function(event) {
 		let val = Number($('#form-mode input:checked').val());
-		$('#form-mode').slideUp();
+		$('#form-mode').addClass('no-display');
 		switch( val ) {
 			case 3:
-				$('#form-breed').slideDown();
+				$('#form-breed').removeClass('no-display');
 				$('#breed').focus();
 				break;
 			default:
-				$('#form-number').slideDown();
+				$('#form-number').removeClass('no-display');
 				$('#number').focus();
 				break;
 		}
+		$('.btn-restart').removeClass('no-display');
 	});
 }
 
@@ -310,6 +311,19 @@ function slideshowResizeHandler() {
 	})
 }
 
+function restartButtonHandler() {
+	$('.btn-restart').click( function( event ) {
+		console.log('restart button pressed');
+		stopSlideshow();
+		$('.results').addClass('no-display');
+		$('#form-breed').addClass('no-display');
+		$('#form-number').addClass('no-display');
+		$('#form-mode').removeClass('no-display');
+		$('.btn-restart').addClass('no-display');
+	});
+}
+		
+		
 function main() {
 	$(modeSelectHandler);
 	$(numberSubmitHandler);
@@ -324,7 +338,7 @@ function main() {
 	$(slideshowSwipeLeftHandler);
 	$(slideshowSwipeRightHandler);
 	$(slideshowResizeHandler);
-
+	$(restartButtonHandler);
 }
 
 $(document).ready( function() { main(); } );

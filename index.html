@@ -36,8 +36,7 @@
 					</ul>
 				</fieldset>
 			</form>
-			<div class="mode-selection no-display"></div>
-			<form id="form-number" hidden>
+			<form id="form-number" class="center no-display">
 				<fieldset>
 					<legend>Number of dog images</legend>
 					<label for="number">Number of dog images: </label>
@@ -45,7 +44,7 @@
 					<input type="submit" id="submit-number" value="Retrieve images">
 				</fieldset>
 			</form>
-			<form id="form-breed" hidden>
+			<form id="form-breed" class="center no-display">
 				<fieldset>
 					<legend>Dog breed to display</legend>
 					<label for="breed">Dog breed to display: </label>
@@ -54,17 +53,21 @@
 				</fieldset>
 			</form>
 		</section>
-		<section class="results"></section>
-		<div class="banner no-display">
-			<div class="slider-container">
-				<div class="banner-slider">
-					<!--Populated by script.js-->
+		<section class="results">
+			<div class="banner no-display">
+				<div class="slider-container">
+					<div class="banner-slider">
+						<!--Populated by script.js-->
+					</div>
 				</div>
+				<button class="btn-pause" id="pause-slideshow" aria-label="pause-slideshow"><i class="fas fa-pause"></i></button>
+				<button class="btn-arrow btn-arrow-prev" id="banner-prev" aria-label="previous-slide"><i class="fas fa-chevron-left"></i></button>
+				<button class="btn-arrow btn-arrow-next" id="banner-next" aria-label="next-slide"><i class="fas fa-chevron-right"></i></button>
 			</div>
-			<button class="btn-pause" id="pause-slideshow" aria-label="pause-slideshow"><i class="fas fa-pause"></i></button>
-			<button class="btn-arrow btn-arrow-prev" id="banner-prev" aria-label="previous-slide"><i class="fas fa-chevron-left"></i></button>
-			<button class="btn-arrow btn-arrow-next" id="banner-next" aria-label="next-slide"><i class="fas fa-chevron-right"></i></button>
-		</div>
+		</section>
+		<section class="center">
+			<button class="btn-restart no-display">Restart</button>
+		</section>
 	</main>
 	<footer>
 		<div class="footer-initial">
