@@ -245,6 +245,7 @@ function breedSubmitHandler() {
 		const breed = $('#breed').val();
 		let ok = true;
 		let status = 200;
+		console.log('breed submit handler');
 		fetch( `https://dog.ceo/api/breed/${breed}/images/random` )
 			.then( response => {
 				ok = response.ok;
@@ -319,6 +320,7 @@ function restartButtonHandler() {
 		$('#form-breed').addClass('no-display');
 		$('#form-number').addClass('no-display');
 		$('#form-mode').removeClass('no-display');
+		$('#form-mode input:checked').prop('checked', false);
 		$('.btn-restart').addClass('no-display');
 	});
 }
