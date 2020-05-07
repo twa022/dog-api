@@ -242,26 +242,30 @@ function breedSubmitHandler() {
 		event.stopPropagation();
 		event.preventDefault();
 		const breed = $('#breed').val();
+		let ok = true;
+		let status = 200;
 		fetch( `https://dog.ceo/api/breed/${breed}/images/random` )
 			.then( response => {
-				if ( !response.ok ) {
-					throw new Error( `Received ${response.status} response.` );
-				}
+				ok = response.ok;
+				status = response.status;
 				return response.json() 
 			}).then( responseJson => {
 				if ( !responseJson.hasOwnProperty( 'message') ) {
 					throw new Error( 'Unexpected result format. No \'message\' property.')
 				}
+				// Need the response JSON message, so have to save ok and status to reference them here...
+				if ( !ok ) {
+					throw new Error( `Error (status ${status}): ${responseJson.message}` );
+				}
 				console.log( responseJson );
 				console.log( responseJson.message );
-				// TODO
 				$('.banner').removeClass('no-display');
 				generateBanner( [ responseJson.message ] );
 				startSlideshow();
 			}).catch( error => { 
 				console.log(`Unable to retrieve image for ${breed}. ${error.message}`);
 				$('.banner').removeClass('no-display');
-				bannerDisplayError( `Unable to retrieve image for ${breed}. ${error.message}` );
+				bannerDisplayError( `Unable to retrieve image for ${breed}.<br>${error.message}` );
 				startSlideshow();
 			})
 	})
