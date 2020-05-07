@@ -120,11 +120,11 @@ input:checked ~ label .check {
 	border: unset;
 }
 
-input[type="radio"] {
+.radio-btn {
 	display: none;
 }
 
-input[type="text"], input[type="number"] {
+#breed, #number {
 	padding: 3px;
 	padding-left: 5px;
 }
