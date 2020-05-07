@@ -11,6 +11,8 @@ const SLIDESHOW_AUTOADVANCE_MS = 5000;
 
 const ANIMATION_TIME_MS = 1000;
 
+const KEEP_LOG = true;
+
 function generateBanner( images ) {
 	let html = "";
 	console.log( images[0] );
@@ -233,7 +235,7 @@ function numberSubmitHandler() {
 			}).then( responseJson => {
 				switch( mode ) {
 					case 1: // Just log the response
-						console.log( responseJson.message );
+						( KEEP_LOG ) ? console.log( responseJson.message ) : false ; // Keeps this from being minified out...
 						break;
 					case 2: // Display the images
 						$('.banner').removeClass('no-display');
