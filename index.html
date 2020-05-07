@@ -1,93 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Dog API Fun</title>
-	<meta name="description" content="Dog API Fun">
-
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css">
-	<link href="main.css" rel="stylesheet" type="text/css">
-	<link rel="icon" type="image/png" href="icon.png">
-	<!--Fonts-->
-	<link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-</head>
-<body>
-	<div class="bg"></div>
-	<main>
-		<h1>Dog API Fun</h1>
-		<section>
-			<form id="form-mode">
-				<fieldset>
-					<legend>Mode</legend>
-					<ul class="no-decoration">
-						<li>
-							<input type="radio" class="radio-btn" id="mode1" name="mode" value="1">
-							<label for="mode1"><span class="check"></span> <span class="lbl-text">Print random dog image URLs to the console</span></label>
-						</li>
-						<li>
-							<input type="radio" class="radio-btn" id="mode2" name="mode" value="2">
-							<label for="mode2"><span class="check"></span> <span class="lbl-text">Display random dog images</span></label>
-						</li>
-						<li>
-							<input type="radio" class="radio-btn" id="mode3" name="mode" value="3">
-							<label for="mode3"><span class="check"></span> <span class="lbl-text">Display a random image of a specified breed</span></label>
-						</li>
-					</ul>
-				</fieldset>
-			</form>
-			<form id="form-number" class="center no-display">
-				<fieldset>
-					<legend>Number of dog images</legend>
-					<label for="number">Number of dog images: </label>
-					<input type="number" name="number" id="number" min="1" max="50" value="3" step="1">
-					<input type="submit" id="submit-number" value="Retrieve images">
-				</fieldset>
-			</form>
-			<form id="form-breed" class="center no-display">
-				<fieldset>
-					<legend>Dog breed to display</legend>
-					<label for="breed">Dog breed to display: </label>
-					<input type="text" name="breed" id="breed" placeholder="Chihuahua">
-					<input type="submit" id="submit-breed" value="Retrieve random image">
-				</fieldset>
-			</form>
-		</section>
-		<section class="results">
-			<div class="banner no-display">
-				<div class="slider-container">
-					<div class="banner-slider">
-						<!--Populated by script.js-->
-					</div>
-				</div>
-				<button class="btn-pause" id="pause-slideshow" aria-label="pause-slideshow"><i class="fas fa-pause"></i></button>
-				<button class="btn-arrow btn-arrow-prev" id="banner-prev" aria-label="previous-slide"><i class="fas fa-chevron-left"></i></button>
-				<button class="btn-arrow btn-arrow-next" id="banner-next" aria-label="next-slide"><i class="fas fa-chevron-right"></i></button>
-			</div>
-		</section>
-		<section class="center">
-			<button class="btn-restart no-display">Main Menu</button>
-		</section>
-	</main>
-	<footer>
-		<div class="footer-initial">
-			<p>Attributions</p>
-		</div>
-		<div class="footer-hover no-display">
-			<p>Favicon: <a href="https://thenounproject.com/term/dog/61386/">Dog icon</a> by <a href="https://thenounproject.com/buenabuena">Buena Buena</a> from <a href="https://thenounproject.com/">the Noun Project</a></p>
-		</div>
-		<div class="footer-hover no-display">
-			<p>
-				<a href="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/single-minded-royalty-free-image-997141470-1558379890.jpg">Background</a>: 
-				Michael Milfeit / Getty Images
-			</p>
-		</div>
-		<div class="footer-hover no-display">
-			<p><a href="https://dog.ceo/dog-api/">The Dog API</a></p>
-		</div>
-	</footer>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/detect_swipe/2.1.4/jquery.detect_swipe.min.js"></script>
-	<script src="script.js"></script>
-</body>
-</html>
+<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Dog API Fun</title><meta name=description content="Dog API Fun"><link href=https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css rel=stylesheet><link href=main.css rel=stylesheet><link rel=icon type=image/png href=icon.png><link href=https://use.fontawesome.com/releases/v5.4.1/css/all.css rel=stylesheet integrity=sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz crossorigin=anonymous><div class=bg></div><main><h1>Dog API Fun</h1><section><form id=form-mode><fieldset><legend>Mode</legend><ul class=no-decoration><li><input type=radio class=radio-btn id=mode1 name=mode value=1>
+<label for=mode1><span class=check></span><span class=lbl-text>Print random dog image URLs to the console</span></label><li><input type=radio class=radio-btn id=mode2 name=mode value=2>
+<label for=mode2><span class=check></span><span class=lbl-text>Display random dog images</span></label><li><input type=radio class=radio-btn id=mode3 name=mode value=3>
+<label for=mode3><span class=check></span><span class=lbl-text>Display a random image of a specified breed</span></label></ul></fieldset></form><form id=form-number class="center no-display"><fieldset><legend>Number of dog images</legend>
+<label for=number>Number of dog images:</label>
+<input type=number name=number id=number min=1 max=50 value=3 step=1>
+<input type=submit id=submit-number value="Retrieve images"></fieldset></form><form id=form-breed class="center no-display"><fieldset><legend>Dog breed to display</legend>
+<label for=breed>Dog breed to display:</label>
+<input name=breed id=breed placeholder=Chihuahua>
+<input type=submit id=submit-breed value="Retrieve random image"></fieldset></form></section><section class=results><div class="banner no-display"><div class=slider-container><div class=banner-slider></div></div><button class=btn-pause id=pause-slideshow aria-label=pause-slideshow><i class="fas fa-pause"></i></button>
+<button class="btn-arrow btn-arrow-prev" id=banner-prev aria-label=previous-slide><i class="fas fa-chevron-left"></i></button>
+<button class="btn-arrow btn-arrow-next" id=banner-next aria-label=next-slide><i class="fas fa-chevron-right"></i></button></div></section><section class=center><button class="btn-restart no-display">Main Menu</button></section></main><footer><div class=footer-initial><p>Attributions</div><div class="footer-hover no-display"><p>Favicon: <a href=https://thenounproject.com/term/dog/61386/>Dog icon</a> by <a href=https://thenounproject.com/buenabuena>Buena Buena</a> from <a href=https://thenounproject.com/>the Noun Project</a></div><div class="footer-hover no-display"><p><a href=https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/single-minded-royalty-free-image-997141470-1558379890.jpg>Background</a>:
+Michael Milfeit / Getty Images</div><div class="footer-hover no-display"><p><a href=https://dog.ceo/dog-api/>The Dog API</a></div></footer><script src=https://code.jquery.com/jquery-3.4.1.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/detect_swipe/2.1.4/jquery.detect_swipe.min.js></script><script src=script.js></script>
