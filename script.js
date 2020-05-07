@@ -316,9 +316,11 @@ function restartButtonHandler() {
 	$('.btn-restart').click( function( event ) {
 		console.log('restart button pressed');
 		stopSlideshow();
-		$('.results').addClass('no-display');
+		$('.banner').addClass('no-display');
 		$('#form-breed').addClass('no-display');
 		$('#form-number').addClass('no-display');
+		$('#number').val('3');
+		$('#breed').val('');
 		$('#form-mode').removeClass('no-display');
 		$('#form-mode input:checked').prop('checked', false);
 		$('.btn-restart').addClass('no-display');
